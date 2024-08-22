@@ -1,0 +1,284 @@
+/* custom.css */
+header {
+    background-color: #FFD700; 
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h3 {
+    color: #FFFFFF; /* Warna putih untuk teks */
+}
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav li {
+    margin-left: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+.btn-primary {
+    background-color: #FFA500; /* Warna oranye cerah */
+    border-color: #FFA500;
+    color: #FFFFFF; /* Warna putih untuk teks tombol */
+}
+
+.btn-light {
+    background-color: #FFFFFF;
+    color: #FFD700; 
+    border: 1px solid #FFD700; /* Tambahkan ketebalan border */
+}
+
+.btn-primary:hover {
+    background-color: #FFFFFF; /* Pastikan menggunakan background-color untuk konsistensi */
+    border-color: #FFD700;
+    color: #FFD700;
+}
+
+.btn-light:hover {
+    background-color: #FFA500;
+    color: #FFFFFF; 
+    border-color: #FFFFFF; /* Perbaiki kesalahan tipografi di sini */
+}
+
+.btn {
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1); 
+}
+
+/* hero-section */
+.container {
+    display: grid;
+}
+
+.bg{
+    opacity: 0.5;
+}
+
+.container .split-screen {
+    grid-column: 1; /* Place in the first column */
+}
+
+.split-screen {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.split-screen .left, .split-screen .right {
+    width: 50%;
+    position: relative;
+    margin-bottom: 600px;
+}
+
+.split-screen .right{
+    display: flex;
+    margin-top: 150px;
+    justify-content: center;
+    text-align: center;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.right h1{
+    font-size: 400%;
+    background: -webkit-linear-gradient(#000000, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: inline;
+    
+}
+
+.left-img{
+    max-width: 180%;
+    height: auto;  
+    margin-left: -140px;
+    border-radius: 15px 50px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 03 ease;
+    position: relative;
+    object-fit: cover;
+}
+
+.left-side-image:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* end hero section */
+
+/* CSS untuk animasi */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Mulai dari bawah */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0); /* Kembali ke posisi awal */
+}
+
+/* section tentang */
+#about {
+    background: linear-gradient(to right, #ffeac4, #ffbe44); 
+    padding: 50px 0; 
+    color: #000000; 
+}
+
+.main-container {   
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.left-panel, .right-panel {
+    flex: 1; 
+    padding: 20px;
+}
+
+.left-content, .right-content {
+    margin: 0;
+    padding: 0;
+}
+
+.left-content h1, .left-content h4, .left-content h5 {
+    margin: 0 0 10px; 
+}
+
+.left-content h1 {
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
+}
+
+.left-content h4 {
+    font-size: 1.5rem; 
+    margin-bottom: 15px; 
+    color:#FFA500
+}
+
+.left-content h5 {
+    font-size: 1rem; 
+    line-height: 1.6; 
+
+}
+
+.right-content h5 {
+    font-size: 1rem;    
+    line-height: 1.6; 
+    margin: 0;
+    padding: 0 10px;
+}
+
+.left-image {
+    width: 100%;
+    max-width: 100%; 
+    height: 600px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.right-image{
+    width: 100%;
+    max-width: 100%; 
+    height: 600px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Menyusun panel secara vertikal pada layar kecil */
+        align-items: center; /* Menyelaraskan konten di tengah */
+    }
+
+    .left-panel, .right-panel {
+        width: 100%; /* Menyesuaikan lebar panel di layar kecil */
+        padding: 10px; /* Padding lebih kecil */
+    }
+
+    .left-content h1 {
+        font-size: 2rem; /* Ukuran font lebih kecil untuk layar kecil */
+    }
+
+    .left-content h4 {
+        font-size: 1.25rem; /* Ukuran font lebih kecil untuk layar kecil */
+    }
+
+    .left-content h5, .right-content h5 {
+        font-size: 0.9rem; /* Ukuran font lebih kecil untuk layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .left-content h1 {
+        font-size: 1.5rem; /* Ukuran font lebih kecil untuk layar sangat kecil */
+    }
+
+    .left-content h4 {
+        font-size: 1rem; /* Ukuran font lebih kecil untuk layar sangat kecil */
+    }
+
+    .left-content h5, .right-content h5 {
+        font-size: 0.8rem; /* Ukuran font lebih kecil untuk layar sangat kecil */
+    }
+}
+
+@media (max-width: 768px) {
+    .right-panel {
+        width: 100%; /* Menyesuaikan lebar pada layar kecil */
+        padding: 10px; /* Padding lebih kecil pada layar kecil */
+    }
+
+    .right-content h5 {
+        font-size: 0.9rem; /* Ukuran font lebih kecil pada layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .right-content h5 {
+        font-size: 0.8rem; /* Ukuran font lebih kecil pada layar sangat kecil */
+    }
+}
+
+
+/* end section tentang */
