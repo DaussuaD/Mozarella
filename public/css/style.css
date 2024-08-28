@@ -1,6 +1,11 @@
 /* custom.css */
+body {
+    font-family: 'Merriweather', serif;
+}
+
 header {
-    background-color: #FFD700; 
+    background-color: #fffce4; 
+    height: 120px;
 }
 
 .header-content {
@@ -9,8 +14,16 @@ header {
     justify-content: space-between;
 }
 
+header img{
+    width: 100px;
+    height: 120px;
+    object-fit: cover;
+    margin: 0;
+}
+
 header h3 {
-    color: #FFFFFF; /* Warna putih untuk teks */
+    color: #000000;
+
 }
 
 .nav {
@@ -26,28 +39,28 @@ header h3 {
 
 .nav-link {
     text-decoration: none;
-    color: #333;
-    font-size: 18px;
+    color: #000000;
+    font-size: 15px;
 }
 
 .nav-link:hover {
-    color: #000;
+    color: #000000;
 }
 
 .btn-primary {
-    background-color: #FFA500; /* Warna oranye cerah */
+    background-color: #FFA500; 
     border-color: #FFA500;
-    color: #FFFFFF; /* Warna putih untuk teks tombol */
+    color: #FFFFFF; 
 }
 
 .btn-light {
     background-color: #FFFFFF;
     color: #FFD700; 
-    border: 1px solid #FFD700; /* Tambahkan ketebalan border */
+    border: 1px solid #FFD700; 
 }
 
 .btn-primary:hover {
-    background-color: #FFFFFF; /* Pastikan menggunakan background-color untuk konsistensi */
+    background-color: #FFF9e1; /* Pastikan menggunakan background-color untuk konsistensi */
     border-color: #FFD700;
     color: #FFD700;
 }
@@ -106,12 +119,12 @@ header h3 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
 }
 
 .right h1{
-    font-size: 400%;
+    font-size: 350%;
     background: -webkit-linear-gradient(#000000, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -203,12 +216,13 @@ header h3 {
     line-height: 1.6; 
     margin: 0;
     padding: 0 10px;
+    font-size: 0.9rem;
 }
 
 .left-image {
     width: 100%;
     max-width: 100%; 
-    height: 600px;
+    height: 400px;
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
     object-fit: cover;
@@ -218,67 +232,331 @@ header h3 {
 .right-image{
     width: 100%;
     max-width: 100%; 
-    height: 600px;
+    height: 400px;
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
     object-fit: cover;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
     .main-container {
-        flex-direction: column; /* Menyusun panel secara vertikal pada layar kecil */
-        align-items: center; /* Menyelaraskan konten di tengah */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .left-panel, .right-panel {
-        width: 100%; /* Menyesuaikan lebar panel di layar kecil */
-        padding: 10px; /* Padding lebih kecil */
+        width: 100%; 
+        padding: 10px; 
     }
 
     .left-content h1 {
-        font-size: 2rem; /* Ukuran font lebih kecil untuk layar kecil */
+        font-size: 2rem; 
     }
 
     .left-content h4 {
-        font-size: 1.25rem; /* Ukuran font lebih kecil untuk layar kecil */
+        font-size: 1.25rem; 
     }
 
     .left-content h5, .right-content h5 {
-        font-size: 0.9rem; /* Ukuran font lebih kecil untuk layar kecil */
+        font-size: 0.9rem; 
     }
 }
 
 @media (max-width: 480px) {
     .left-content h1 {
-        font-size: 1.5rem; /* Ukuran font lebih kecil untuk layar sangat kecil */
+        font-size: 1.5rem; 
     }
 
     .left-content h4 {
-        font-size: 1rem; /* Ukuran font lebih kecil untuk layar sangat kecil */
+        font-size: 1rem; 
     }
 
     .left-content h5, .right-content h5 {
-        font-size: 0.8rem; /* Ukuran font lebih kecil untuk layar sangat kecil */
+        font-size: 0.8rem; 
     }
 }
 
 @media (max-width: 768px) {
     .right-panel {
-        width: 100%; /* Menyesuaikan lebar pada layar kecil */
-        padding: 10px; /* Padding lebih kecil pada layar kecil */
+        width: 100%; 
+        padding: 10px; 
     }
 
     .right-content h5 {
-        font-size: 0.9rem; /* Ukuran font lebih kecil pada layar kecil */
+        font-size: 0.9rem; 
     }
 }
 
 @media (max-width: 480px) {
     .right-content h5 {
-        font-size: 0.8rem; /* Ukuran font lebih kecil pada layar sangat kecil */
+        font-size: 0.8rem; 
     }
 }
 
+.bagian-pembuat-keju {
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    width: 90%;
+    margin-left: 95px;
+    
+}
+  
+.bagian-pembuat-keju p:first-of-type {
+    margin-bottom: 20px;
+}
+  
+.konten {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+  
+.konten .gambar {
+    flex: 1;
+}
+  
+.konten .gambar img {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+  
+.konten .teks {
+    flex: 1;
+    background-color: #ffbe445d;
+    color: #000000;
+    padding: 10px;
+    margin-right: 50px;
+    border-radius: 10px;
+  }
+  
+  /* Responsif untuk perangkat mobile */
+  @media (max-width: 768px) {
+    .konten {
+      flex-direction: column;
+    }
+  
+    .konten .gambar,
+    .konten .teks {
+      width: 100%;
+    }
+  
+    .bagian-pembuat-keju p:first-of-type {
+      font-size: 1rem;
+    }
+  
+    .konten .teks {
+      font-size: 0.9rem;
+    }
+  }
+
+.bagian-pembuat-keju {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.bagian-pembuat-keju.muncul {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* end section tentang */
+
+/* section produk */
+#produk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+    background-color: #ffe88da6; /* Warna background seperti cheese */
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 80%;
+    margin: 30px auto;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    width: 60%;
+}
+
+.carousel-items {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: calc(100% / 3);
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.carousel-button {
+    background-color: #003366; /* Warna tombol panah */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .produk {
+        max-width: 95%;
+    }
+
+    .carousel-wrapper {
+        width: 90%;
+    }
+
+    .carousel-item {
+        min-width: calc(100%/2);
+    }
+
+    .carousel-button {
+        padding: 8px;
+    }
+}
+
+/* edn section produk */
+
+/* informasi pemesanan */
+#pemesanan{
+    background-color: #fffae2;
+    padding: 20px;
+    text-align: center;
+}
+
+.kontak-kami {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.kontak-container { /* Class yang lebih unik menggantikan container */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.kontak-container h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #E3C57E;
+}
+
+.cta {
+    margin: 40px 0;
+    color: #E3C57E; /* Warna teks ajakan emas */
+}
+
+.address-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: #e3c57e;
+}
+
+.kantor-pusat, .pabrik {
+    flex: 1;
+    min-width: 300px;
+    margin: 20px;
+}
+
+.kantor-pusat h3, .pabrik h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #000000; /* Warna judul sub-bagian emas */
+}
+
+.kantor-pusat p, .pabrik p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #000000; /* Warna teks alamat */
+}
+
+/* Media Query untuk layar lebih kecil */
+@media screen and (max-width: 768px) {
+    .contact-info p {
+        font-size: 0.875rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    .cta {
+        font-size: 1.125rem;
+    }
+
+    .addres-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kantor-pusat, .pabrik {
+        margin: 20px 0;
+    }
+
+    .kantor-pusat h3, .pabrik h3 {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-info p {
+        font-size: 0.75rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h5 {
+        font-size: 0.875rem;
+    }
+
+    .cta {
+        font-size: 1rem;
+    }
+
+    .kantor-pusat h3, .pabrik h3 {
+        font-size: 1rem;
+    }
+}
+/* end informasi pemesanan */
